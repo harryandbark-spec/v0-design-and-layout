@@ -30,13 +30,13 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "(555) 123-4567",
+    value: "+1 604-991-0465",
     description: "Mon-Fri, 9am-5pm EST",
   },
   {
     icon: Mail,
     title: "Email",
-    value: "info@kaushalcpa.com",
+    value: "admin@pks-cpa.com",
     description: "Response within 24 hours",
   },
   {
@@ -48,8 +48,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    value: "Remote Services",
-    description: "Serving clients nationwide",
+    value: "Home-Based",
+    description: "Services",
   },
 ]
 
@@ -89,14 +89,7 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className="absolute inset-0"
-        >
-          <div className="absolute right-1/4 top-1/2 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
-        </motion.div>
+
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <FadeIn>
             <div className="mx-auto max-w-3xl text-center">

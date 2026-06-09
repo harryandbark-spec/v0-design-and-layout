@@ -80,24 +80,24 @@ const whyChooseUs = [
 
 const testimonials = [
   {
-    name: "Sarah M.",
+    name: "Arjun K.",
+    role: "Self-Employed Professional",
+    content:
+      "Preet's deep knowledge of self-employment taxation saved me thousands. He takes time to explain all my options and really understands the Canadian tax system. Highly recommended.",
+    rating: 5,
+  },
+  {
+    name: "Simran P.",
     role: "Small Business Owner",
     content:
-      "Working with Kaushal & Kaushal has been a game-changer for my business. They truly understand small business needs and are always available when I have questions.",
+      "Working with Preet K Singh Accounting has been excellent. He's thorough, responsive, and easy to communicate with—even via WhatsApp. Finally found a CPA who truly listens.",
     rating: 5,
   },
   {
-    name: "David R.",
+    name: "Marcus T.",
     role: "Individual Client",
     content:
-      "I have been a client for several years and the personalized service is unmatched. They take the time to explain everything and find deductions I would have missed.",
-    rating: 5,
-  },
-  {
-    name: "Jennifer L.",
-    role: "Freelancer",
-    content:
-      "As a freelancer, my taxes used to stress me out. Now I have peace of mind knowing everything is handled professionally and accurately.",
+      "The personalized service is unmatched. Preet takes the time to explain everything and finds deductions I would have missed. Professional and always available when I need him.",
     rating: 5,
   },
 ]
@@ -106,7 +106,7 @@ const faqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We serve clients throughout the United States. Most of our work is conducted remotely via secure document sharing and video calls, making it convenient regardless of your location.",
+      "We serve clients throughout Canada, with a strong presence in British Columbia. Most of our work is conducted remotely via secure document sharing and video calls, making it convenient regardless of your location.",
   },
   {
     question: "How much do your services cost?",
@@ -116,17 +116,17 @@ const faqs = [
   {
     question: "What documents do I need for tax preparation?",
     answer:
-      "We provide a comprehensive checklist tailored to your situation. Common documents include W-2s, 1099s, receipts for deductions, and prior year tax returns. We will guide you through exactly what is needed.",
+      "We provide a comprehensive checklist tailored to your situation. Common documents include T4s, T1 Generals, receipts for deductions, and prior year tax returns. We will guide you through exactly what is needed.",
   },
   {
     question: "Do you work with small businesses?",
     answer:
-      "Absolutely. Small businesses are a core part of our practice. We offer bookkeeping, tax preparation, and advisory services specifically designed for small business needs and budgets.",
+      "Absolutely. Small businesses and self-employed individuals are a core part of our practice. We offer bookkeeping, tax preparation, and advisory services specifically designed for small business needs and budgets.",
   },
   {
     question: "What makes you different from larger firms?",
     answer:
-      "You work directly with an experienced CPA who knows your situation personally. No call centers, no being passed around to different staff members. Just consistent, reliable service from someone who understands your needs.",
+      "You work directly with Preet, an experienced CPA who knows your situation personally. We're accessible via email and WhatsApp, responsive to your needs, and dedicated to providing personalized service. No call centers or being passed around—just reliable, attentive service.",
   },
 ]
 
@@ -320,7 +320,7 @@ export default function HomePage() {
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-serif text-3xl font-bold sm:text-4xl text-balance">
-                Why Choose Kaushal & Kaushal?
+                Why Choose Preet K Singh Accounting?
               </h2>
               <p className="mt-4 text-muted-foreground">
                 We combine professional expertise with the personal touch of a

@@ -54,11 +54,11 @@ export function Header() {
             whileTap={{ scale: 0.95 }}
             className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-shadow group-hover:shadow-lg"
           >
-            <span className="font-serif text-lg font-bold">K</span>
+            <span className="font-serif text-lg font-bold">P</span>
           </motion.div>
           <div className="hidden sm:block">
-            <p className="text-sm font-semibold leading-tight">Kaushal & Kaushal</p>
-            <p className="text-xs text-muted-foreground">Associates Inc.</p>
+            <p className="text-sm font-semibold leading-tight">Preet K Singh</p>
+            <p className="text-xs text-muted-foreground">Accounting, CPA</p>
           </div>
         </Link>
 

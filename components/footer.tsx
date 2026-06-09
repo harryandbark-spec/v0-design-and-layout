@@ -55,18 +55,18 @@ export function Footer() {
           <motion.div variants={itemVariants} className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <span className="font-serif text-lg font-bold">K</span>
+                <span className="font-serif text-lg font-bold">P</span>
               </div>
               <div>
                 <p className="text-sm font-semibold leading-tight">
-                  Kaushal & Kaushal
+                  Preet K Singh
                 </p>
-                <p className="text-xs text-muted-foreground">Associates Inc.</p>
+                <p className="text-xs text-muted-foreground">Accounting, CPA</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
               Professional accounting and tax services tailored for individuals
-              and small businesses.
+              and small businesses in Canada.
             </p>
           </motion.div>
 
@@ -106,19 +106,19 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">
-                  (555) 123-4567
+                  (604) 991-0465
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="mt-0.5 h-4 w-4 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">
-                  info@kaushalcpa.com
+                  info@preetaccounting.ca
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">
-                  Serving clients remotely across the United States
+                  Surrey, BC V3S 0W5, Canada
                 </span>
               </li>
             </ul>
@@ -130,7 +130,7 @@ export function Footer() {
           className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row"
         >
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Kaushal & Kaushal Associates Inc.
+            &copy; {new Date().getFullYear()} Preet K Singh Accounting, CPA.
             All rights reserved.
           </p>
           <div className="flex gap-4">

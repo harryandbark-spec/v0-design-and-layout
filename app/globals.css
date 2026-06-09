@@ -44,6 +44,9 @@
   --navy-light: oklch(0.35 0.05 250);
   --gold: oklch(0.65 0.15 85);
   --gold-light: oklch(0.80 0.12 85);
+  --green: oklch(0.52 0.16 152);
+  --green-light: oklch(0.92 0.06 152);
+  --green-dark: oklch(0.38 0.14 152);
 }
 
 .dark {
@@ -125,6 +128,9 @@
   --color-navy-light: var(--navy-light);
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
+  --color-green: var(--green);
+  --color-green-light: var(--green-light);
+  --color-green-dark: var(--green-dark);
 }
 
 @layer base {

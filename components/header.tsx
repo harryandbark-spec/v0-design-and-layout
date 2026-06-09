@@ -51,7 +51,7 @@ export function Header() {
           <motion.div 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-shadow group-hover:shadow-lg"
+            className="flex h-10 w-10 items-center justify-center rounded-lg bg-green text-white transition-shadow group-hover:shadow-lg"
           >
             <span className="font-serif text-lg font-bold">P</span>
           </motion.div>
@@ -78,7 +78,7 @@ export function Header() {
               {pathname === link.href && (
                 <motion.div
                   layoutId="navbar-indicator"
-                  className="absolute inset-x-1 -bottom-px h-0.5 bg-primary"
+                  className="absolute inset-x-1 -bottom-px h-0.5 bg-green"
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
@@ -89,7 +89,7 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-            <Button asChild className="shadow-sm hover:shadow-md transition-shadow">
+            <Button asChild className="bg-green text-white shadow-sm hover:bg-green-dark hover:shadow-md transition-all">
               <Link href="/book">Book Consultation</Link>
             </Button>
           </motion.div>
@@ -152,7 +152,7 @@ export function Header() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: navLinks.length * 0.05 }}
               >
-                <Button asChild className="mt-2 w-full">
+                <Button asChild className="mt-2 w-full bg-green text-white hover:bg-green-dark">
                   <Link href="/book" onClick={() => setIsOpen(false)}>
                     Book Consultation
                   </Link>

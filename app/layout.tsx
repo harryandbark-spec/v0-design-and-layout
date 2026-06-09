@@ -18,9 +18,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Kaushal & Kaushal Associates Inc. | Professional CPA Services",
+  title: "Preet K Singh Accounting, CPA | Canadian Tax & Accounting Services",
   description:
-    "Trusted accounting and tax services for individuals and small businesses. Personalized attention, expert guidance, and reliable results.",
+    "Trusted Canadian accounting and tax services for individuals, self-employed, and small businesses in BC. Personalized attention, expert CRA guidance, and reliable results.",
   keywords: [
     "CPA",
     "accountant",

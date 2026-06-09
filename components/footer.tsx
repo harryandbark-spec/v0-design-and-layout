@@ -53,7 +53,7 @@ export function Footer() {
           {/* Brand */}
           <motion.div variants={itemVariants} className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green text-white">
                 <span className="font-serif text-lg font-bold">P</span>
               </div>
               <div>
@@ -103,19 +103,19 @@ export function Footer() {
             <h3 className="mb-4 text-sm font-semibold">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
-                <Phone className="mt-0.5 h-4 w-4 text-muted-foreground" />
+                <Phone className="mt-0.5 h-4 w-4 text-green" />
                 <span className="text-sm text-muted-foreground">
                   (604) 991-0465
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <Mail className="mt-0.5 h-4 w-4 text-muted-foreground" />
+                <Mail className="mt-0.5 h-4 w-4 text-green" />
                 <span className="text-sm text-muted-foreground">
                   info@preetaccounting.ca
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 text-muted-foreground" />
+                <MapPin className="mt-0.5 h-4 w-4 text-green" />
                 <span className="text-sm text-muted-foreground">
                   Surrey, BC V3S 0W5, Canada
                 </span>

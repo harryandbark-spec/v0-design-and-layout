@@ -138,7 +138,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-office.jpg"
+            src="/images/hero-office.png"
             alt=""
             fill
             className="object-cover opacity-20"
@@ -166,7 +166,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm text-primary-foreground backdrop-blur-sm"
+                  className="inline-flex items-center rounded-full border border-green/40 bg-green/20 px-4 py-1.5 text-sm font-medium text-primary-foreground backdrop-blur-sm"
                 >
                   Trusted CPA Services
                 </motion.div>
@@ -183,8 +183,7 @@ export default function HomePage() {
                     <Button
                       asChild
                       size="lg"
-                      variant="secondary"
-                      className="font-semibold shadow-lg hover:shadow-xl transition-shadow"
+                      className="bg-green text-white font-semibold shadow-lg hover:bg-green-dark hover:shadow-xl transition-all"
                     >
                       <Link href="/book">
                         Book Free Consultation
@@ -224,7 +223,7 @@ export default function HomePage() {
                     {[
                       { value: "8+", label: "Years Experience" },
                       { value: "100%", label: "Client Focus" },
-                      { value: "IRS", label: "Enrolled Agent" },
+                      { value: "CRA", label: "CPA Designated" },
                       { value: "24/7", label: "Secure Portal" },
                     ].map((stat, index) => (
                       <motion.div
@@ -276,7 +275,7 @@ export default function HomePage() {
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 400 }}
-                        className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+                        className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-light text-green transition-colors group-hover:bg-green group-hover:text-white"
                       >
                         <service.icon className="h-6 w-6" />
                       </motion.div>
@@ -310,7 +309,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-secondary/50" />
         <div className="absolute inset-0">
           <Image
-            src="/images/services-workspace.jpg"
+            src="/images/services-workspace.png"
             alt=""
             fill
             className="object-cover opacity-5"
@@ -342,7 +341,7 @@ export default function HomePage() {
                 >
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold"
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-light text-green"
                   >
                     <item.icon className="h-6 w-6" />
                   </motion.div>
@@ -390,7 +389,7 @@ export default function HomePage() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: i * 0.1 }}
                           >
-                            <Star className="h-4 w-4 fill-gold text-gold" />
+                            <Star className="h-4 w-4 fill-green text-green" />
                           </motion.div>
                         ))}
                       </div>
@@ -436,7 +435,7 @@ export default function HomePage() {
                   transition={{ delay: index * 0.05 }}
                 >
                   <AccordionItem value={`item-${index}`}>
-                    <AccordionTrigger className="text-left font-medium hover:text-primary transition-colors">
+                    <AccordionTrigger className="text-left font-medium hover:text-green transition-colors">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
@@ -457,7 +456,7 @@ export default function HomePage() {
             <div className="relative overflow-hidden rounded-3xl bg-primary p-8 text-center sm:p-12">
               {/* Background decoration */}
               <div className="absolute inset-0">
-                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
+                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-green/15 blur-3xl" />
                 <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
               </div>
               
@@ -472,7 +471,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Button asChild size="lg" variant="secondary" className="shadow-lg">
+                    <Button asChild size="lg" className="bg-green text-white shadow-lg hover:bg-green-dark">
                       <Link href="/book">Book Free Consultation</Link>
                     </Button>
                   </motion.div>

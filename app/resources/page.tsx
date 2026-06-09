@@ -20,100 +20,100 @@ import { FadeIn, StaggerContainer, StaggerItem, ScaleOnScroll } from "@/componen
 import { motion } from "framer-motion"
 
 const featuredArticle = {
-  title: "2024 Tax Season: What You Need to Know",
+  title: "2025 Canadian Tax Season: What You Need to Know",
   excerpt:
-    "Key changes to tax brackets, deductions, and credits that could affect your 2024 filing. Stay informed and prepared for tax season.",
+    "Key changes to federal and BC provincial tax brackets, deductions, and credits that could affect your 2025 T1 filing. Stay informed and prepared for tax season.",
   category: "Tax Tips",
-  date: "January 15, 2024",
+  date: "January 10, 2025",
   readTime: "5 min read",
   slug: "#",
 }
 
 const articles = [
   {
-    title: "5 Common Tax Deductions Small Businesses Miss",
+    title: "Self-Employment in Canada: Tax Deductions You Should Not Miss",
     excerpt:
-      "Discover often-overlooked deductions that could save your business money this tax season.",
-    category: "Small Business",
-    date: "December 20, 2023",
+      "Freelancers and sole proprietors in BC often leave money on the table. Discover the most commonly overlooked deductions on your T1.",
+    category: "Self-Employed",
+    date: "December 10, 2024",
     readTime: "4 min read",
     slug: "#",
   },
   {
-    title: "Understanding Quarterly Estimated Taxes",
+    title: "How to Pay CRA Instalments and Avoid Penalties",
     excerpt:
-      "A guide to calculating and paying estimated taxes to avoid penalties.",
+      "If you owe more than $3,000 in taxes, the CRA may require quarterly instalment payments. Here is how to calculate and pay them correctly.",
     category: "Tax Tips",
-    date: "November 10, 2023",
+    date: "November 5, 2024",
     readTime: "6 min read",
     slug: "#",
   },
   {
-    title: "Choosing Between LLC and S-Corp: A Comparison",
+    title: "Sole Proprietor vs. Incorporated: Which Is Right for You?",
     excerpt:
-      "Learn the key differences to help you choose the right business structure.",
+      "A practical comparison of operating as a sole proprietor versus incorporating in BC, including tax and liability considerations.",
     category: "Small Business",
-    date: "October 5, 2023",
+    date: "October 1, 2024",
     readTime: "7 min read",
     slug: "#",
   },
   {
-    title: "Year-End Tax Planning Strategies",
+    title: "Year-End Tax Planning for Canadians",
     excerpt:
-      "Smart moves to make before December 31st to optimize your tax situation.",
+      "Smart moves to make before December 31st — RRSP contributions, loss harvesting, and more — to lower your 2024 tax bill.",
     category: "Tax Planning",
-    date: "September 15, 2023",
+    date: "September 12, 2024",
     readTime: "5 min read",
     slug: "#",
   },
   {
-    title: "Home Office Deduction: Who Qualifies?",
+    title: "Claiming a Home Office Deduction in Canada",
     excerpt:
-      "Everything you need to know about claiming a home office deduction.",
+      "Working from home? Learn how to claim workspace-in-home expenses on your T1 under the detailed or flat-rate method.",
     category: "Tax Tips",
-    date: "August 22, 2023",
+    date: "August 18, 2024",
     readTime: "4 min read",
     slug: "#",
   },
   {
-    title: "Retirement Contributions and Tax Benefits",
+    title: "RRSP vs. TFSA: Which Should You Contribute To First?",
     excerpt:
-      "Maximize your retirement savings while reducing your tax burden.",
+      "Both accounts offer powerful tax advantages, but choosing the right one depends on your income and goals. We break it down simply.",
     category: "Financial Planning",
-    date: "July 30, 2023",
+    date: "July 22, 2024",
     readTime: "6 min read",
     slug: "#",
   },
 ]
 
 const categories = [
-  { name: "Tax Tips", icon: Calculator, count: 12 },
-  { name: "Small Business", icon: Building2, count: 8 },
-  { name: "Financial Planning", icon: BookOpen, count: 6 },
-  { name: "Personal Finance", icon: Users, count: 5 },
+  { name: "Tax Tips", icon: Calculator, count: 10 },
+  { name: "Self-Employed", icon: Users, count: 7 },
+  { name: "Small Business", icon: Building2, count: 6 },
+  { name: "Financial Planning", icon: BookOpen, count: 5 },
 ]
 
 const downloads = [
   {
-    title: "Tax Preparation Checklist",
+    title: "Canadian T1 Tax Checklist",
     description:
-      "A comprehensive list of documents needed for your tax appointment.",
+      "A comprehensive list of slips and documents needed for your personal tax return (T4, T5, RRSP, etc.).",
     format: "PDF",
   },
   {
-    title: "Business Expense Tracker",
+    title: "Self-Employment Expense Tracker",
     description:
-      "Simple spreadsheet to track business expenses throughout the year.",
+      "Simple spreadsheet to track business expenses throughout the year for your T2125.",
     format: "Excel",
   },
   {
-    title: "2024 Tax Calendar",
-    description: "Important tax deadlines and dates for individuals and businesses.",
+    title: "2025 CRA Tax Deadlines",
+    description: "Key filing and payment deadlines for individuals and self-employed Canadians.",
     format: "PDF",
   },
   {
-    title: "Mileage Log Template",
-    description: "Track business mileage for tax deduction purposes.",
+    title: "Vehicle & Mileage Log",
+    description: "Track business kilometres for CRA motor vehicle expense claims.",
     format: "Excel",
   },
 ]
@@ -158,8 +158,9 @@ export default function ResourcesPage() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="mt-6 text-lg text-primary-foreground/80"
               >
-                Helpful articles, tax tips, and downloadable tools to help you
-                stay informed and organized.
+                Canadian tax tips, CRA guides, and free downloadable tools to
+                help you stay informed and organized — written for BC residents,
+                self-employed individuals, and small business owners.
               </motion.p>
             </div>
           </FadeIn>
@@ -393,8 +394,9 @@ export default function ResourcesPage() {
               Stay Informed
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Subscribe to our newsletter for tax tips, deadline reminders, and
-              helpful financial insights delivered to your inbox.
+              Subscribe for Canadian tax tips, CRA deadline reminders, and
+              practical financial insights from Preet K Singh, CPA — delivered
+              straight to your inbox.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <input

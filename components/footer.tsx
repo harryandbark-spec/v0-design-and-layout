@@ -5,7 +5,6 @@ import { Mail, Phone, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 
 const quickLinks = [
-  { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/resources", label: "Resources" },
   { href: "/contact", label: "Contact" },

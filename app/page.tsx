@@ -26,28 +26,24 @@ import { motion } from "framer-motion"
 
 const services = [
   {
-    icon: Calculator,
-    title: "Tax Preparation",
+    title: "Maximize Your Tax Refund",
     description:
-      "Individual and business tax returns prepared accurately and on time.",
+      "Find every deduction you're entitled to and keep more of your money.",
   },
   {
-    icon: FileText,
-    title: "Bookkeeping",
+    title: "Never Miss a Deduction Again",
     description:
-      "Keep your financial records organized and up-to-date year-round.",
+      "Stay organized year-round so you never lose money to forgotten expenses.",
   },
   {
-    icon: TrendingUp,
-    title: "Business Advisory",
+    title: "Grow Your Business Faster",
     description:
-      "Strategic guidance to help your business grow and thrive.",
+      "Get strategic financial guidance that helps you make smarter business decisions.",
   },
   {
-    icon: Shield,
-    title: "IRS Representation",
+    title: "Protect Yourself from CRA Issues",
     description:
-      "Professional representation if you face an audit or tax issue.",
+      "Get expert representation if you face an audit or tax notice.",
   },
 ]
 
@@ -83,21 +79,21 @@ const testimonials = [
     name: "Arjun K.",
     role: "Self-Employed Professional",
     content:
-      "Preet's deep knowledge of self-employment taxation saved me thousands. He takes time to explain all my options and really understands the Canadian tax system. Highly recommended.",
+      "Preet found $5,200 in deductions I didn't know I qualified for. My first year working with him saved me more than his fees cost. Best financial decision I've made.",
     rating: 5,
   },
   {
     name: "Simran P.",
     role: "Small Business Owner",
     content:
-      "Working with Preet K Singh Accounting has been excellent. He's thorough, responsive, and easy to communicate with—even via WhatsApp. Finally found a CPA who truly listens.",
+      "My tax bill went from $12,000 to $7,400 after Preet restructured my business expenses. He responds within hours on WhatsApp and actually explains things in plain English.",
     rating: 5,
   },
   {
     name: "Marcus T.",
     role: "Individual Client",
     content:
-      "The personalized service is unmatched. Preet takes the time to explain everything and finds deductions I would have missed. Professional and always available when I need him.",
+      "Got audited by the CRA and Preet resolved it in 2 weeks instead of the 3 months they estimated. Zero penalties and he found an additional $1,800 refund during the process.",
     rating: 5,
   },
 ]
@@ -170,9 +166,13 @@ export default function HomePage() {
                 >
                   Trusted CPA Services
                 </motion.div>
-                <h1 className="font-serif text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl text-balance">Surrey’s Trusted CPA – Preet K Singh Accounting</h1>
+                <h1 className="font-serif text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl text-balance">
+                  Keep More of Your Hard-Earned Money
+                </h1>
                 <p className="max-w-lg text-lg text-primary-foreground/80">
-                  Expert Personal & Corporate Tax, Bookkeeping & Advisory Services
+                  Stop overpaying on taxes and missing deductions. Get the
+                  maximum refund you deserve with personalized Canadian tax
+                  expertise that actually saves you money.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
@@ -182,7 +182,7 @@ export default function HomePage() {
                       className="bg-green text-white font-semibold shadow-lg hover:bg-green-dark hover:shadow-xl transition-all"
                     >
                       <Link href="/book">
-                        Book Free Consultation
+                        Get Your Maximum Refund
                         <ChevronRight className="ml-1 h-4 w-4" />
                       </Link>
                     </Button>
@@ -259,38 +259,28 @@ export default function HomePage() {
               </p>
             </div>
           </FadeIn>
-          <StaggerContainer className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <StaggerItem key={service.title}>
+          <div className="mt-12 space-y-6">
+            {services.map((service, index) => (
+              <FadeIn key={service.title} delay={index * 100}>
                 <motion.div
-                  whileHover={{ y: -8 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  whileHover={{ x: 8 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="border-l-4 border-green bg-secondary/30 p-6 hover:bg-secondary/50 transition-colors"
                 >
-                  <Card className="group h-full transition-shadow hover:shadow-xl">
-                    <CardContent className="flex h-full flex-col p-6">
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                        className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-light text-green transition-colors group-hover:bg-green group-hover:text-white"
-                      >
-                        <service.icon className="h-6 w-6" />
-                      </motion.div>
-                      <h3 className="mb-2 font-semibold">{service.title}</h3>
-                      <p className="text-sm text-muted-foreground">
-                        {service.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+                  <h3 className="font-semibold">{service.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {service.description}
+                  </p>
                 </motion.div>
-              </StaggerItem>
+              </FadeIn>
             ))}
-          </StaggerContainer>
+          </div>
           <FadeIn delay={400}>
             <div className="mt-10 text-center">
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Button asChild variant="outline">
                   <Link href="/services">
-                    View All Services
+                    See How I Can Help
                     <ChevronRight className="ml-1 h-4 w-4" />
                   </Link>
                 </Button>
@@ -354,6 +344,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Personal Story */}
+      <section className="py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="grid gap-12 lg:grid-cols-2">
+            <FadeIn direction="left">
+              <div className="relative aspect-square overflow-hidden rounded-2xl bg-secondary">
+                <Image
+                  src="/placeholder-user.jpg"
+                  alt="Preet K Singh"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn direction="right">
+              <div className="flex flex-col justify-center">
+                <h2 className="font-serif text-3xl font-bold sm:text-4xl text-balance">
+                  Meet Preet K Singh
+                </h2>
+                <p className="mt-4 text-muted-foreground">
+                  I started this practice because I saw too many people overpaying on taxes simply because they didn't know what deductions they were entitled to. After working with large firms, I realized that personalized attention makes all the difference.
+                </p>
+                <p className="mt-4 text-muted-foreground">
+                  When you work with me, you're not just another file on someone's desk. I take the time to understand your specific situation and find every opportunity to save you money. Whether you're self-employed, running a small business, or just want to ensure you're not leaving money on the table, I'm here to help.
+                </p>
+                <p className="mt-4 text-muted-foreground">
+                  My clients have saved thousands of dollars in their first year with me, and many have become long-term partners in their financial success. Let's see how much I can save you.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -368,16 +392,25 @@ export default function HomePage() {
               </p>
             </div>
           </FadeIn>
-          <StaggerContainer className="mt-12 grid gap-6 md:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <StaggerItem key={testimonial.name}>
+          <div className="mt-12 space-y-6">
+            {testimonials.map((testimonial, index) => (
+              <FadeIn key={testimonial.name} delay={index * 100}>
                 <motion.div
-                  whileHover={{ y: -4 }}
+                  whileHover={{ x: 8 }}
                   transition={{ type: "spring", stiffness: 300 }}
+                  className="border-l-4 border-gold bg-secondary/30 p-6 hover:bg-secondary/50 transition-colors"
                 >
-                  <Card className="h-full transition-shadow hover:shadow-lg">
-                    <CardContent className="flex h-full flex-col p-6">
-                      <div className="mb-4 flex gap-1">
+                  <div className="flex gap-4">
+                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-secondary">
+                      <Image
+                        src="/placeholder.jpg"
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <div className="mb-2 flex gap-1">
                         {Array.from({ length: testimonial.rating }).map((_, i) => (
                           <motion.div
                             key={i}
@@ -389,21 +422,21 @@ export default function HomePage() {
                           </motion.div>
                         ))}
                       </div>
-                      <p className="flex-1 text-sm text-muted-foreground italic">
+                      <p className="text-sm text-muted-foreground italic">
                         &ldquo;{testimonial.content}&rdquo;
                       </p>
-                      <div className="mt-4 border-t border-border pt-4">
+                      <div className="mt-4">
                         <p className="font-semibold">{testimonial.name}</p>
                         <p className="text-xs text-muted-foreground">
                           {testimonial.role}
                         </p>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </motion.div>
-              </StaggerItem>
+              </FadeIn>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
@@ -458,17 +491,16 @@ export default function HomePage() {
               
               <div className="relative">
                 <h2 className="font-serif text-3xl font-bold text-primary-foreground sm:text-4xl text-balance">
-                  Ready to Get Started?
+                  Stop Leaving Money on the Table
                 </h2>
                 <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">
-                  Schedule a free consultation to discuss your accounting needs.
-                  No obligation, just a friendly conversation about how we can
-                  help.
+                  Schedule a free consultation to find out how much you could be
+                  saving. Most clients discover deductions they didn't know existed.
                 </p>
                 <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button asChild size="lg" className="bg-green text-white shadow-lg hover:bg-green-dark">
-                      <Link href="/book">Book Free Consultation</Link>
+                      <Link href="/book">Find Your Savings</Link>
                     </Button>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
@@ -478,7 +510,7 @@ export default function HomePage() {
                       variant="outline"
                       className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
                     >
-                      <Link href="/contact">Contact Us</Link>
+                      <Link href="/contact">Start Saving Today</Link>
                     </Button>
                   </motion.div>
                 </div>

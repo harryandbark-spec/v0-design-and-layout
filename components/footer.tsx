@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -8,7 +9,7 @@ const quickLinks = [
   { href: "/services", label: "Services" },
   { href: "/resources", label: "Resources" },
   { href: "/contact", label: "Contact" },
-  { href: "/book", label: "Book Consultation" },
+  { href: "/book", label: "Book Appointment" },
 ]
 
 const services = [
@@ -16,7 +17,7 @@ const services = [
   "Bookkeeping",
   "Business Advisory",
   "Financial Planning",
-  "IRS Representation",
+  "CRA Representation",
 ]
 
 const containerVariants = {
@@ -53,14 +54,14 @@ export function Footer() {
           {/* Brand */}
           <motion.div variants={itemVariants} className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green text-white">
-                <span className="font-serif text-lg font-bold">P</span>
-              </div>
-              <div>
-                <p className="text-sm font-semibold leading-tight">
-                  Preet K Singh
-                </p>
-                <p className="text-xs text-muted-foreground">Accounting, CPA</p>
+              <div className="relative h-12 w-auto">
+                <Image
+                  src="/images/logo.png"
+                  alt="Preet K Singh Accounting, CPA"
+                  width={150}
+                  height={48}
+                  className="object-contain"
+                />
               </div>
             </div>
             <p className="text-sm text-muted-foreground">

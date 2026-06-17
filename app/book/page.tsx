@@ -34,7 +34,7 @@ const services = [
   "Tax Preparation Consultation",
   "Bookkeeping Services",
   "Business Advisory",
-  "IRS Issue or Notice",
+  "CRA Issue or Notice",
   "New Business Setup",
   "General Consultation",
 ]

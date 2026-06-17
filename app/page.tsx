@@ -138,7 +138,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-office.png"
+            src="/images/hero-placeholder.png"
             alt=""
             fill
             className="object-cover opacity-20"
@@ -170,13 +170,9 @@ export default function HomePage() {
                 >
                   Trusted CPA Services
                 </motion.div>
-                <h1 className="font-serif text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl text-balance">
-                  Professional Accounting, Personal Attention
-                </h1>
+                <h1 className="font-serif text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl text-balance">Surrey’s Trusted CPA – Preet K Singh Accounting</h1>
                 <p className="max-w-lg text-lg text-primary-foreground/80">
-                  Expert tax preparation, bookkeeping, and business advisory
-                  services tailored to your unique needs. Experience the
-                  difference of working with a CPA who truly cares.
+                  Expert Personal & Corporate Tax, Bookkeeping & Advisory Services
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -11,8 +12,7 @@ import { motion, AnimatePresence } from "framer-motion"
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/resources", label: "Resources" },
-  { href: "/contact", label: "Contact" },
+  { href: "/book", label: "Book" },
 ]
 
 export function Header() {
@@ -48,17 +48,19 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex h-10 w-10 items-center justify-center rounded-lg bg-green text-white transition-shadow group-hover:shadow-lg"
+            className="relative h-12 w-auto transition-shadow group-hover:shadow-lg"
           >
-            <span className="font-serif text-lg font-bold">P</span>
+            <Image
+              src="/images/logo.png"
+              alt="Preet K Singh Accounting, CPA"
+              width={150}
+              height={48}
+              className="object-contain"
+            />
           </motion.div>
-          <div className="hidden sm:block">
-            <p className="text-sm font-semibold leading-tight">Preet K Singh</p>
-            <p className="text-xs text-muted-foreground">Accounting, CPA</p>
-          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -90,7 +92,7 @@ export function Header() {
         <div className="hidden md:block">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Button asChild className="bg-green text-white shadow-sm hover:bg-green-dark hover:shadow-md transition-all">
-              <Link href="/book">Book Consultation</Link>
+              <Link href="/contact">Contact Us</Link>
             </Button>
           </motion.div>
         </div>
@@ -153,8 +155,8 @@ export function Header() {
                 transition={{ delay: navLinks.length * 0.05 }}
               >
                 <Button asChild className="mt-2 w-full bg-green text-white hover:bg-green-dark">
-                  <Link href="/book" onClick={() => setIsOpen(false)}>
-                    Book Consultation
+                  <Link href="/contact" onClick={() => setIsOpen(false)}>
+                    Contact Us
                   </Link>
                 </Button>
               </motion.div>

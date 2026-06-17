@@ -31,12 +31,12 @@ const contactInfo = [
     icon: Phone,
     title: "Phone",
     value: "+1 604-991-0465",
-    description: "Mon-Fri, 9am-5pm EST",
+    description: "Mon-Fri, 9am-5pm PST",
   },
   {
     icon: Mail,
     title: "Email",
-    value: "admin@pks-cpa.com",
+    value: "info@preetaccounting.ca",
     description: "Response within 24 hours",
   },
   {
@@ -48,8 +48,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    value: "Home-Based",
-    description: "Services",
+    value: "Surrey, BC V3S 0W5",
+    description: "Canada",
   },
 ]
 
@@ -57,7 +57,7 @@ const services = [
   "Tax Preparation",
   "Bookkeeping",
   "Business Advisory",
-  "IRS Representation",
+  "CRA Representation",
   "Payroll Services",
   "Financial Planning",
   "Other",
@@ -118,36 +118,25 @@ export default function ContactPage() {
       {/* Contact Info Cards */}
       <section className="py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <StaggerContainer className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {contactInfo.map((item) => (
-              <StaggerItem key={item.title}>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {contactInfo.map((item, index) => (
+              <FadeIn key={item.title} delay={index * 100}>
                 <motion.div
-                  whileHover={{ y: -4 }}
+                  whileHover={{ x: 8 }}
                   transition={{ type: "spring", stiffness: 300 }}
+                  className="border-l-4 border-green bg-secondary/30 p-6 hover:bg-secondary/50 transition-colors"
                 >
-                  <Card className="h-full hover:shadow-lg transition-shadow">
-                    <CardContent className="flex items-start gap-4 p-6">
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"
-                      >
-                        <item.icon className="h-5 w-5" />
-                      </motion.div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">
-                          {item.title}
-                        </p>
-                        <p className="font-semibold">{item.value}</p>
-                        <p className="text-xs text-muted-foreground">
-                          {item.description}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <p className="text-sm text-muted-foreground">
+                    {item.title}
+                  </p>
+                  <p className="font-semibold">{item.value}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {item.description}
+                  </p>
                 </motion.div>
-              </StaggerItem>
+              </FadeIn>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
@@ -400,13 +389,12 @@ export default function ContactPage() {
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <ScaleOnScroll>
             <h2 className="font-serif text-2xl font-bold sm:text-3xl text-balance">
-              Serving Clients Nationwide
+              Serving Clients Across Canada
             </h2>
             <p className="mt-4 text-muted-foreground">
-              While we are based in the United States, we work with clients
-              across the country. All consultations and document sharing are
-              handled securely online, making our services accessible no matter
-              where you are located.
+              Based in Surrey, BC, we work with clients throughout Canada.
+              All consultations and document sharing are handled securely online,
+              making our services accessible no matter where you are located.
             </p>
           </ScaleOnScroll>
         </div>

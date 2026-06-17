@@ -21,24 +21,22 @@ import { motion } from "framer-motion"
 
 const mainServices = [
   {
-    icon: Calculator,
-    title: "Tax Preparation",
+    title: "Maximize Your Tax Refund",
     description:
-      "Comprehensive tax preparation for individuals, families, and small businesses.",
+      "Find every deduction you're entitled to and keep more of your hard-earned money.",
     features: [
-      "Individual tax returns (Form 1040)",
-      "Small business returns (Schedule C)",
-      "Partnership & S-Corp returns",
+      "Individual tax returns (T1 General)",
+      "Small business returns (T2125)",
+      "Corporation returns",
       "Tax planning and strategy",
       "Amendment preparation",
-      "Multi-state filing",
+      "Multi-province filing",
     ],
   },
   {
-    icon: FileText,
-    title: "Bookkeeping",
+    title: "Never Miss a Deduction Again",
     description:
-      "Keep your financial records organized, accurate, and up-to-date throughout the year.",
+      "Stay organized year-round so you never lose money to forgotten expenses.",
     features: [
       "Monthly bookkeeping",
       "Bank reconciliation",
@@ -49,10 +47,9 @@ const mainServices = [
     ],
   },
   {
-    icon: TrendingUp,
-    title: "Business Advisory",
+    title: "Grow Your Business Faster",
     description:
-      "Strategic guidance to help your business grow, optimize, and succeed.",
+      "Get strategic financial guidance that helps you make smarter business decisions.",
     features: [
       "Business entity selection",
       "Financial analysis",
@@ -63,39 +60,34 @@ const mainServices = [
     ],
   },
   {
-    icon: Shield,
-    title: "IRS Representation",
+    title: "Protect Yourself from CRA Issues",
     description:
-      "Professional representation and support when dealing with tax authorities.",
+      "Get expert representation if you face an audit or tax notice.",
     features: [
       "Audit representation",
       "Notice response",
       "Payment plans (installment agreements)",
-      "Offer in compromise",
       "Penalty abatement",
       "Tax lien assistance",
+      "CRA negotiation",
     ],
   },
 ]
 
 const additionalServices = [
   {
-    icon: Building2,
     title: "Business Formation",
     description: "LLC, S-Corp, and Partnership setup with proper tax elections.",
   },
   {
-    icon: PiggyBank,
     title: "Retirement Planning",
     description: "Tax-advantaged retirement strategy and contribution optimization.",
   },
   {
-    icon: ClipboardCheck,
     title: "Payroll Services",
     description: "Complete payroll processing with tax filings and compliance.",
   },
   {
-    icon: Users,
     title: "Estate Planning Support",
     description: "Tax considerations for wealth transfer and estate matters.",
   },
@@ -173,7 +165,7 @@ export default function ServicesPage() {
               </p>
             </div>
           </FadeIn>
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+          <div className="mt-12 space-y-8">
             {mainServices.map((service, index) => (
               <FadeIn
                 key={service.title}
@@ -181,44 +173,29 @@ export default function ServicesPage() {
                 delay={index * 100}
               >
                 <motion.div
-                  whileHover={{ y: -4 }}
+                  whileHover={{ x: 8 }}
                   transition={{ type: "spring", stiffness: 300 }}
+                  className="border-l-4 border-green bg-secondary/30 p-6 hover:bg-secondary/50 transition-colors"
                 >
-                  <Card className="h-full hover:shadow-xl transition-shadow">
-                    <CardHeader>
-                      <div className="flex items-start gap-4">
-                        <motion.div
-                          whileHover={{ scale: 1.1, rotate: 5 }}
-                          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"
-                        >
-                          <service.icon className="h-6 w-6" />
-                        </motion.div>
-                        <div>
-                          <CardTitle className="text-xl">{service.title}</CardTitle>
-                          <p className="mt-2 text-sm text-muted-foreground">
-                            {service.description}
-                          </p>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="grid gap-2 sm:grid-cols-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <motion.li
-                            key={feature}
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: featureIndex * 0.05 }}
-                            className="flex items-start gap-2 text-sm"
-                          >
-                            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                            <span className="text-muted-foreground">{feature}</span>
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
+                  <h3 className="text-xl font-semibold">{service.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {service.description}
+                  </p>
+                  <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <motion.li
+                        key={feature}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: featureIndex * 0.05 }}
+                        className="flex items-start gap-2 text-sm"
+                      >
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
                 </motion.div>
               </FadeIn>
             ))}
@@ -256,12 +233,6 @@ export default function ServicesPage() {
                 >
                   <Card className="h-full bg-background/80 backdrop-blur-sm hover:shadow-xl transition-shadow">
                     <CardContent className="flex flex-col items-center p-6 text-center">
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 10 }}
-                        className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/20 text-gold"
-                      >
-                        <service.icon className="h-6 w-6" />
-                      </motion.div>
                       <h3 className="mb-2 font-semibold">{service.title}</h3>
                       <p className="text-sm text-muted-foreground">
                         {service.description}
@@ -408,17 +379,17 @@ export default function ServicesPage() {
               </div>
               <div className="relative">
                 <h2 className="font-serif text-3xl font-bold text-primary-foreground sm:text-4xl text-balance">
-                  Ready to Get Started?
+                  Start Saving Money Today
                 </h2>
                 <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">
-                  Let&apos;s discuss how we can help with your accounting needs.
-                  Schedule a free consultation today.
+                  Let&apos;s discuss how much you could be saving with the right
+                  tax strategy. Schedule a free consultation today.
                 </p>
                 <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button asChild size="lg" variant="secondary" className="shadow-lg">
                       <Link href="/book">
-                        Book Free Consultation
+                        Get Your Tax Strategy
                         <ChevronRight className="ml-1 h-4 w-4" />
                       </Link>
                     </Button>
@@ -430,7 +401,7 @@ export default function ServicesPage() {
                       variant="outline"
                       className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
                     >
-                      <Link href="/contact">Contact Us</Link>
+                      <Link href="/contact">Start Saving Today</Link>
                     </Button>
                   </motion.div>
                 </div>
